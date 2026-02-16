@@ -1,0 +1,52 @@
+import pandas as pd
+
+# 1. THE DATASET: Comprehensive MCU Movie List
+# Includes Title, Year, and Chronological Timeline Order
+mcu_movies = [
+    {"Title": "Captain America: The First Avenger", "Year": 2011, "Timeline": 1, "Rating": 6.9},
+    {"Title": "Captain Marvel", "Year": 2019, "Timeline": 2, "Rating": 6.8},
+    {"Title": "Iron Man", "Year": 2008, "Timeline": 3, "Rating": 7.9},
+    {"Title": "Iron Man 2", "Year": 2010, "Timeline": 4, "Rating": 6.9},
+    {"Title": "The Incredible Hulk", "Year": 2008, "Timeline": 5, "Rating": 6.6},
+    {"Title": "Thor", "Year": 2011, "Timeline": 6, "Rating": 7.0},
+    {"Title": "The Avengers", "Year": 2012, "Timeline": 7, "Rating": 8.0},
+    {"Title": "Thor: The Dark World", "Year": 2013, "Timeline": 8, "Rating": 6.8},
+    {"Title": "Iron Man 3", "Year": 2013, "Timeline": 9, "Rating": 7.1},
+    {"Title": "Captain America: The Winter Soldier", "Year": 2014, "Timeline": 10, "Rating": 7.8},
+    {"Title": "Guardians of the Galaxy", "Year": 2014, "Timeline": 11, "Rating": 8.0},
+    {"Title": "Guardians of the Galaxy Vol. 2", "Year": 2017, "Timeline": 12, "Rating": 7.6},
+    {"Title": "Avengers: Age of Ultron", "Year": 2015, "Timeline": 13, "Rating": 7.3},
+    {"Title": "Ant-Man", "Year": 2015, "Timeline": 14, "Rating": 7.3},
+    {"Title": "Captain America: Civil War", "Year": 2016, "Timeline": 15, "Rating": 7.8},
+    {"Title": "Black Widow", "Year": 2021, "Timeline": 16, "Rating": 6.7},
+    {"Title": "Black Panther", "Year": 2018, "Timeline": 17, "Rating": 7.3},
+    {"Title": "Spider-Man: Homecoming", "Year": 2017, "Timeline": 18, "Rating": 7.4},
+    {"Title": "Doctor Strange", "Year": 2016, "Timeline": 19, "Rating": 7.5},
+    {"Title": "Thor: Ragnarok", "Year": 2017, "Timeline": 20, "Rating": 7.9},
+    {"Title": "Ant-Man and the Wasp", "Year": 2018, "Timeline": 21, "Rating": 7.0},
+    {"Title": "Avengers: Infinity War", "Year": 2018, "Timeline": 22, "Rating": 8.4},
+    {"Title": "Avengers: Endgame", "Year": 2019, "Timeline": 23, "Rating": 8.4}
+]
+
+# Create the DataFrame
+df = pd.DataFrame(mcu_movies)
+
+# 2. LOGIC: Sorting Function
+def generate_watchlist(df, sort_type):
+    print(f"\n--- MCU WATCHLIST: SORTED BY {sort_type.upper()} ---")
+    
+    if sort_type == "Timeline":
+        # Sorts by the internal chronological story order
+        return df.sort_values(by="Timeline")
+    elif sort_type == "Rating":
+        # Sorts by highest quality first
+        return df.sort_values(by="Rating", ascending=False)
+    else:
+        # Default: Sorts by the year it hit theaters
+        return df.sort_values(by="Year")
+
+# 3. EXECUTION: Choose your experience
+# CHANGE "Timeline" to "Rating" or "Year" to see it update!
+final_list = generate_watchlist(df, "Timeline")
+
+print(final_list[['Title', 'Year', 'Rating']])
