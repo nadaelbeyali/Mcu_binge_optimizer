@@ -1,6 +1,6 @@
 # Disney+ MCU Binge-Watch Optimizer
 
-![MCU Project Dashboard](mcu.jpg)
+![MCU Project Dashboard](Mcu.jpg)
 
 ### Project Overview
 This data-driven tool allows Disney+ users to optimize their Marvel Cinematic Universe (MCU) experience. Using the **Pandas** library, the script processes a multi-variable dataset to instantly re-sort 20+ films based on different fan preferences: Theatrical Release, Chronological Timeline, or Critic Ratings.
