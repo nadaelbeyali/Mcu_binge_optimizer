@@ -18,6 +18,3 @@ This data-driven tool allows Disney+ users to optimize their Marvel Cinematic Un
 
 ### Why This Matters for Disney+
 Modern streaming platforms rely on efficient metadata sorting to drive recommendation engines. This project demonstrates an understanding of how to structure "Binge-Watch" logic to increase user engagement on a digital platform.
-
----
-*Developed as part of a Digital Media Portfolio for the Disney Professional Internship program.*
